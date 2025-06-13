@@ -66,16 +66,17 @@ body {
   transform: translateY(0);
 }
 
-/* .hero {
-  background: radial-gradient(
+.hero {
+  /* background: radial-gradient(
     circle,
     #685436 0%,
     #655345 25%,
     #3b3229 50%,
     #1e1b18 75%,
     #11110f 100%
-  );
-} */
+  ); */
+  transition: filter 500ms ease-in-out;
+}
 
 .hero svg {
   width: 100%;

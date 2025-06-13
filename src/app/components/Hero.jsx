@@ -47,7 +47,7 @@ const Hero = () => {
     <>
       <section
         id="bg_home"
-        className="hero blur-3xl transition-all w-full h-[100vh] top-0 overflow-hidden"
+        className="hero blur-3xl w-full h-[100vh] overflow-hidden"
       ></section>
       <article className="hero-title absolute top-0 w-full h-[100vh] z-10 flex flex-col justify-center items-center sm:text-6xl text-5xl uppercase font-[1000] text-[#a09c9c] gap-1">
         <p>Workforce</p>

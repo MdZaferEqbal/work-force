@@ -37,41 +37,41 @@ function setAnimationScroll() {
 
   runAnimation
     .add([
-      gsap.to("#bg_home svg", 2, {
+      gsap.to("#bg_home svg", {
         scale: 1.5,
       }),
-      gsap.to("#full_city", 2, {
+      gsap.to("#full_city", {
         opacity: 0,
       }),
     ])
     .add([
-      gsap.to("#building_top", 2, {
+      gsap.to("#building_top", {
         y: -200,
         opacity: 0,
       }),
-      gsap.to("#wall_side", 2, {
+      gsap.to("#wall_side", {
         x: -200,
         opacity: 0,
       }),
-      gsap.to("#wall_front", 2, {
+      gsap.to("#wall_front", {
         x: 200,
         y: 200,
         opacity: 0,
       }),
     ])
     .add([
-      gsap.to("#interior_wall_side", 2, {
+      gsap.to("#interior_wall_side", {
         x: -200,
         opacity: 0,
       }),
-      gsap.to("#interior_wall_top", 2, {
+      gsap.to("#interior_wall_top", {
         y: -200,
         opacity: 0,
       }),
-      gsap.to("#interior_wall_side_2", 2, {
+      gsap.to("#interior_wall_side_2", {
         opacity: 0,
       }),
-      gsap.to("#interior_wall_front", 2, {
+      gsap.to("#interior_wall_front", {
         opacity: 0,
       }),
     ]);
