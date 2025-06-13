@@ -1,26 +1,107 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "Allenia";
+  src: url("/assets/fonts/allenia/Allenia.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/poppins/Poppins-Regular.ttf") format("truetype");
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000000;
+  font-family: "Poppins", sans-serif;
+  color: #eee;
+  overflow-x: hidden;
+}
+
+.text-logo {
+  font-family: "Allenia", sans-serif;
+}
+
+.nav-links {
+  position: relative;
+  transition: all 250ms ease-in-out;
+}
+.nav-links:hover {
+  color: #a09c9c;
+}
+.nav-links::before {
+  transform: translateY(-100);
+}
+.nav-links:first-child::before {
+  transform: translateX(-100);
+}
+.nav-links:last-child::before {
+  transform: translateX(100);
+}
+.nav-links::before {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 0;
+  background-color: #eee;
+  transition: all 250ms ease-in-out;
+}
+.nav-links:hover::before {
+  opacity: 1;
+  background-color: #a09c9c;
+  transform: translateX(0);
+  transform: translateY(0);
+}
+
+/* .hero {
+  background: radial-gradient(
+    circle,
+    #685436 0%,
+    #655345 25%,
+    #3b3229 50%,
+    #1e1b18 75%,
+    #11110f 100%
+  );
+} */
+
+.hero svg {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+}
+
+.hero-title {
+  font-family: "Allenia", sans-serif;
+}
+
+.about {
+  padding-block: 5em;
+}
+
+.about h1 {
+  font-family: "Allenia", sans-serif;
+}
+
+.about::before {
+  width: 100%;
+  height: 100px;
+  content: "";
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  bottom: 99%;
+  background-image: linear-gradient(to top, #000, #0000);
 }
