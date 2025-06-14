@@ -7,6 +7,19 @@ export const metadata: Metadata = {
   description:
     "Experience seamless, high-performance animations with our GSAP-powered website. Designed for smooth transitions, engaging interactions, and a modern, intuitive user journey that captivates at every scroll.",
   icons: { icon: "/assets/img/favicon.svg" },
+  openGraph: {
+    type: "website",
+    url: "https://work-force-zafer.netlify.app",
+    title: "WorkForce",
+    description:
+      "Experience seamless, high-performance animations with our GSAP-powered website. Designed for smooth transitions, engaging interactions, and a modern, intuitive user journey that captivates at every scroll.",
+    images: [
+      {
+        url: "https://work-force-zafer.netlify.app/assets/img/city.svg",
+        alt: "WorkForce - Seamless GSAP Animations",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
