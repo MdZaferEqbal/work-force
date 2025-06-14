@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   title: "ContoHome",
   description:
     "Experience seamless, high-performance animations with our GSAP-powered website. Designed for smooth transitions, engaging interactions, and a modern, intuitive user journey that captivates at every scroll.",
-  icons: { icon: "/assets/img/favicon.svg" },
+  icons: { icon: "https://conto-home.netlify.app/assets/img/favicon.svg" },
   openGraph: {
     images: [
       {
-        url: "/assets/img/favicon.svg",
+        url: "https://conto-home.netlify.app/assets/img/favicon.svg",
         width: 1200,
         height: 630,
         alt: "ContoHome - Seamless GSAP Animations",
