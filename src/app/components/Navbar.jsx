@@ -18,7 +18,7 @@ const Navbar = () => {
           href="/"
           className="text-logo flex items-center font-[1000] text-[#a09c9c] text-4xl"
         >
-          WorkForce
+          ContoHome
         </Link>
         <div role="navigation" className="flex gap-10">
           {navItems.map((navItem) => (

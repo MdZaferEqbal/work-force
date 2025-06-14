@@ -35,32 +35,25 @@ const About = () => {
   ];
 
   useEffect(() => {
-    let aboutAnimation = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".about-title",
-        start: "+450 top",
-        end: "-=1000 bottom",
-        scrub: 0.5,
-      },
-    });
-
-    document.fonts.ready.then(() => {
-      let split = SplitText.create(".about-title", {
-        type: "chars, words",
-      });
-
-      aboutAnimation.from(split.chars, {
-        duration: 3,
-        yPercent: "random(-100, 100)",
-        scale: 0.8,
-        autoAlpha: 0,
-        opacity: 0,
-        ease: "back.out",
-        stagger: {
-          amount: 0.5,
-          from: "random",
+    gsap.utils.toArray(".fadeIn").forEach((el) => {
+      gsap.fromTo(
+        el,
+        {
+          opacity: 0,
+          y: 50,
         },
-      });
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power2.inOut",
+          scrollTrigger: {
+            trigger: el,
+            start: "+=450 top",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
     });
   }, []);
 
@@ -70,14 +63,14 @@ const About = () => {
       className="about w-full flex mt-3 flex-col items-center relative min-h-[100vh]"
     >
       <article className="sm:w-[70%] w-[80%] flex flex-col gap-5">
-        <h1 className="about-title text-center uppercase sm:text-9xl text-6xl font-extrabold text-[#a09c9c]">
+        <h1 className="about-title fadeIn text-center uppercase sm:text-9xl text-6xl font-extrabold text-[#a09c9c]">
           About
         </h1>
         <div className="flex flex-col gap-10" role="document">
-          <p className="about-welcome text-center sm:text-5xl">
-            Welcome to Workforce, where we make modern web design.
+          <p className="about-welcome fadeIn text-center sm:text-5xl">
+            Welcome to ContoHome, where we make modern web design.
           </p>
-          <p className="about-desc text-center sm:text-2xl text-[#a09c9c]">
+          <p className="about-desc fadeIn text-center sm:text-2xl text-[#a09c9c]">
             We’ve carefully crafted our website using GSAP (GreenSock Animation
             Platform), a powerful JavaScript library known for creating
             high-performance animations on the web. By leveraging GSAP, we’ve
@@ -90,7 +83,7 @@ const About = () => {
             more dynamic and enjoyable way.
           </p>
         </div>
-        <div className="tetimonials flex flex-wrap gap-10 justify-center border-t-8 border-black mb-3 mt-7">
+        <div className="tetimonials fadeIn flex flex-wrap gap-10 justify-center border-t-8 border-black mb-3 mt-7">
           {testimonials.map((testimonial) => (
             <Image
               key={testimonial.alt}
