@@ -3,7 +3,7 @@ import { Navbar } from "./components";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "WorkForce",
+  title: "ContoHome",
   description:
     "Experience seamless, high-performance animations with our GSAP-powered website. Designed for smooth transitions, engaging interactions, and a modern, intuitive user journey that captivates at every scroll.",
   icons: { icon: "/assets/img/favicon.svg" },
