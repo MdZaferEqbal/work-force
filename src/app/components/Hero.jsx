@@ -18,6 +18,15 @@ const Hero = () => {
         start: "top top",
         scrub: true,
         pin: true,
+        onEnter: () => {
+          document.querySelector(".hero-title").style.display = "flex";
+        },
+        onLeave: () => {
+          document.querySelector(".hero-title").style.display = "none";
+        },
+        onEnterBack: () => {
+          document.querySelector(".hero-title").style.display = "flex";
+        },
       },
     });
 
