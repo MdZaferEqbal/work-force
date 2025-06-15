@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       "Experience seamless, high-performance animations with our GSAP-powered website. Designed for smooth transitions, engaging interactions, and a modern, intuitive user journey that captivates at every scroll.",
     images: [
       {
-        url: "https://work-force-zafer.netlify.app/assets/img/city.svg",
+        url: "https://work-force-zafer.netlify.app/assets/img/city.png",
         alt: "WorkForce - Seamless GSAP Animations",
       },
     ],
