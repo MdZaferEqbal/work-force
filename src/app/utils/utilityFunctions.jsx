@@ -9,18 +9,30 @@ export default function loadSVGWithAnimation() {
   fetch("/assets/img/city.svg")
     .then((response) => response.text())
     .then((svg) => {
+      gsap.to("#hero-loader", {
+        opacity: 0,
+        scale: 5,
+        duration: 1,
+        onComplete: () => {
+          document.body.style.overflowY = "visible";
+          document.getElementById("hero-loader").style.display = "none";
+
+          setTimeout(() => {
+            bgHome.classList.remove("blur-3xl");
+          }, 1000);
+
+          const svgElement = document.querySelector("#bg_home svg");
+          if (svgElement) {
+            svgElement.setAttribute("preserveAspectRatio", "xMidYMid slice");
+            setAnimationScroll();
+          }
+        },
+      });
+
       const bgHome = document.getElementById("bg_home");
       if (!bgHome) return;
 
       bgHome.innerHTML = svg;
-      setTimeout(() => {
-        bgHome.classList.remove("blur-3xl");
-      }, 1000);
-      const svgElement = document.querySelector("#bg_home svg");
-      if (svgElement) {
-        svgElement.setAttribute("preserveAspectRatio", "xMidYMid slice");
-        setAnimationScroll();
-      }
     });
 }
 

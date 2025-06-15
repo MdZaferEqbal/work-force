@@ -11,6 +11,8 @@ import rbs from "../../../public/assets/img/the-royal-bannk-of-scotland.png";
 
 import city from "../../../public/assets/img/city.svg";
 
+import loader from "../../../public/assets/img/loader.svg";
+
 export {
   daevoo,
   cocaCola,
@@ -23,4 +25,5 @@ export {
   nokia,
   rbs,
   city,
+  loader,
 };

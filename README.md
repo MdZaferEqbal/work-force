@@ -18,7 +18,7 @@ A modern and dynamic website. Built with **Next.js** for fast and scalable perfo
 - **Frontend Framework:** [Next.js](https://nextjs.org/) (React-based)
 - **Animations:** [GSAP](https://greensock.com/gsap/)
 - **Styling:** Tailwind CSS (or your choice of CSS framework)
-- **Assets:** Provided by [Lun Dev](https://www.lundev.com/) (optional credit)
+- **Assets:** Provided by [Lun Dev](https://www.lundev.com/) (https://codepen.io/nikhil8krishnan/pen/rVoXJa) (optional credit)
 
 ---
 

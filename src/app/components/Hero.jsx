@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import loadSVGWithAnimation from "../utils/utilityFunctions";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import gsap from "gsap";
+import { loader } from "../utils";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
@@ -45,6 +47,12 @@ const Hero = () => {
 
   return (
     <>
+      <div
+        className="absolute z-50 w-full h-[100vh] flex justify-center items-center bg-black text-white text-3xl font-extrabold"
+        id="hero-loader"
+      >
+        <Image src={loader} alt="Loading..." />
+      </div>
       <section
         id="bg_home"
         className="hero blur-3xl w-full h-[100vh] overflow-hidden"
