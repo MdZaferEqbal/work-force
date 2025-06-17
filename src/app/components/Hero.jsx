@@ -27,7 +27,6 @@ const Hero = () => {
       let split = SplitText.create(".hero-title", {
         type: "chars, words",
       });
-
       titleAnimation.to(split.chars, {
         // delay: "0.6",
         yPercent: "random(-100, 100)",
@@ -42,6 +41,11 @@ const Hero = () => {
           from: "random",
         },
       });
+
+      // titleAnimation.to(".hero-title", {
+      //   scale: 5,
+      //   opacity: 0,
+      // });
     });
   }, []);
 

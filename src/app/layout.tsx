@@ -32,6 +32,7 @@ export default function RootLayout({
       <body className="antialiased">
         <Navbar />
         {children}
+        <footer className="h-[90px] bg-black"></footer>
       </body>
     </html>
   );

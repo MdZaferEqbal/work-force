@@ -75,7 +75,7 @@ const About = () => {
           ease: "power2.inOut",
           scrollTrigger: {
             trigger: el,
-            start: "+=450 top",
+            start: "+=400 top",
             toggleActions: "play none none reverse",
           },
         }
@@ -116,6 +116,7 @@ const About = () => {
               src={testimonial.src}
               alt={testimonial.alt}
               height={45}
+              placeholder="blur"
             />
           ))}
         </div>

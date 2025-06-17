@@ -44,6 +44,18 @@ function setAnimationScroll() {
       end: "+=1000",
       scrub: 0.5,
       pin: true,
+      onEnter: () => {
+        document.querySelector(".header")?.classList.remove("backdrop-blur-sm");
+        document.querySelector(".header")?.classList.remove("border-b-2");
+      },
+      onLeave: () => {
+        document.querySelector(".header")?.classList.add("backdrop-blur-sm");
+        document.querySelector(".header")?.classList.add("border-b-2");
+      },
+      onEnterBack: () => {
+        document.querySelector(".header")?.classList.remove("backdrop-blur-sm");
+        document.querySelector(".header")?.classList.remove("border-b-2");
+      },
     },
   });
 

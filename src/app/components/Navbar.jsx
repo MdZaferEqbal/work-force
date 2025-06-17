@@ -12,7 +12,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="w-full h-full relative sm:top-10 top-20 z-20 flex justify-center items-center">
+    <header className="header w-full transition-all h-[75px] rounded-b-sm border-[rgba(160,156,156,0.50)] fixed top-0 z-20 flex justify-center items-center">
       <nav className="absolute sm:w-[70%] w-[80%] flex sm:flex-row sm:gap-0 gap-5 flex-col justify-between items-center">
         <Link
           href="/"
