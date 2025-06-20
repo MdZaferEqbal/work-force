@@ -12,7 +12,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="header w-full transition-all h-[75px] rounded-b-sm border-[rgba(160,156,156,0.50)] sm:fixed absolute sm:top-0 top-5 z-20 flex justify-center items-center">
+    <header className="header w-full transition-all h-[75px] rounded-b-sm sm:fixed absolute sm:top-0 top-5 z-20 flex justify-center items-center">
       <nav className="absolute sm:w-[70%] w-[80%] flex sm:flex-row sm:gap-0 gap-5 flex-col justify-between items-center">
         <Link
           href="/"

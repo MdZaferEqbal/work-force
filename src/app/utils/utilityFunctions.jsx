@@ -46,15 +46,21 @@ function setAnimationScroll() {
       pin: true,
       onEnter: () => {
         document.querySelector(".header")?.classList.remove("backdrop-blur-sm");
-        document.querySelector(".header")?.classList.remove("border-b-2");
+        document
+          .querySelector(".header")
+          ?.classList.remove("bg-[rgba(15,15,15,0.8)]");
       },
       onLeave: () => {
         document.querySelector(".header")?.classList.add("backdrop-blur-sm");
-        document.querySelector(".header")?.classList.add("border-b-2");
+        document
+          .querySelector(".header")
+          ?.classList.add("bg-[rgba(15,15,15,0.8)]");
       },
       onEnterBack: () => {
         document.querySelector(".header")?.classList.remove("backdrop-blur-sm");
-        document.querySelector(".header")?.classList.remove("border-b-2");
+        document
+          .querySelector(".header")
+          ?.classList.remove("bg-[rgba(15,15,15,0.8)]");
       },
     },
   });
