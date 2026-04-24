@@ -14,39 +14,39 @@ const Hero = () => {
   useEffect(() => {
     loadSVGWithAnimation();
 
-    // let titleAnimation = gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: ".hero-title",
-    //     start: "top top",
-    //     scrub: true,
-    //     pin: true,
-    //   },
-    // });
+    let titleAnimation = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".hero-title",
+        start: "top top",
+        scrub: true,
+        pin: true,
+      },
+    });
 
-    // document.fonts.ready.then(() => {
-    //   let split = SplitText.create(".hero-title", {
-    //     type: "chars, words",
-    //   });
-    //   titleAnimation.to(split.chars, {
-    //     // delay: "0.6",
-    //     yPercent: "random(-100, 100)",
-    //     xPercent: "random(-100, 100)",
-    //     rotation: "random(-90, 90)",
-    //     scale: 5,
-    //     autoAlpha: 0,
-    //     opacity: 0,
-    //     ease: "back.out",
-    //     stagger: {
-    //       amount: 0.5,
-    //       from: "random",
-    //     },
-    //   });
+    document.fonts.ready.then(() => {
+      let split = SplitText.create(".hero-title", {
+        type: "chars, words",
+      });
+      titleAnimation.to(split.chars, {
+        // delay: "0.6",
+        yPercent: "random(-100, 100)",
+        xPercent: "random(-100, 100)",
+        rotation: "random(-90, 90)",
+        scale: 5,
+        autoAlpha: 0,
+        opacity: 0,
+        ease: "back.out",
+        stagger: {
+          amount: 0.5,
+          from: "random",
+        },
+      });
 
-    //   // titleAnimation.to(".hero-title", {
-    //   //   scale: 5,
-    //   //   opacity: 0,
-    //   // });
-    // });
+      // titleAnimation.to(".hero-title", {
+      //   scale: 5,
+      //   opacity: 0,
+      // });
+    });
   }, []);
 
   return (
